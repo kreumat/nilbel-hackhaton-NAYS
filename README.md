@@ -41,8 +41,100 @@ nilbel/
 - **Rota Hesaplama**: OSRM destekli ulaşım süreleri
 - **ML Sayım**: YOLOv8 tabanlı kişi algılama
 
-## Teknoloji Yığını
+## Stack
 
 - **Front End**: HTML, CSS, JavaScript, Leaflet.js
 - **Back End**: Statik JSON, OSRM API
-- **ML**: Python, YOLOv8, OpenCV
+- **ML**: Python 3.11.9, YOLOv8, OpenCV
+
+İstediğin talimatlar aşağıdadır:
+
+**Venv (Virtual Environment) Nedir?**
+Projelerin gerektirdiği kütüphaneleri ve bağımlılıkları sistem genelinden ayrı (izole) tutmanı sağlayan sanal bir çalışma ortamıdır.
+
+### Linux için Kurulum ve Aktivasyon Adımları
+
+**1. Proje Klasörüne Git**
+Öncelikle terminalde proje dizinine geçiş yap:
+
+```bash
+cd nays-ml
+
+```
+
+**2. Sanal Ortamı (venv) Oluştur**
+Klasör içerisinde `venv` adında sanal bir ortam yarat:
+
+```bash
+python3 -m venv venv
+
+```
+
+**3. Sanal Ortamı Aktifleştir**
+Oluşturduğun ortamı aktif hale getir:
+
+```bash
+source venv/bin/activate
+
+```
+
+### Çalıştırma Adımları
+
+**Webcam ile görüntü tanıma için:**
+
+```bash
+python main.py
+
+```
+
+**Test videosu için:**
+
+```bash
+python test.py
+
+```
+
+### Windows için Kurulum ve Aktivasyon
+
+**1. Proje Klasörüne Git**
+Terminali aç ve proje dizinine git:
+
+```powershell
+cd nays-ml
+
+```
+
+**2. Sanal Ortamı (venv) Oluştur**
+
+```powershell
+python -m venv venv
+
+```
+
+**3. Sanal Ortamı Aktifleştir**
+Windows'ta `Scripts` klasörü altındaki komutu çalıştır:
+
+```powershell
+venv\Scripts\activate
+
+```
+
+*(Satır başında `(venv)` ibaresini görmelisin.)*
+
+---
+
+### Çalıştırma Adımları
+
+**Webcam ile görüntü tanıma için:**
+
+```powershell
+python main.py
+
+```
+
+**Test videosu için:**
+
+```powershell
+python test.py
+
+```
