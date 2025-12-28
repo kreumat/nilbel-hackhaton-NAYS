@@ -1,140 +1,80 @@
-# NAYS - Nilüfer Akıllı Yoğunluk Sistemi
+İşte projenin için en önemli kısımları koruyan, kopyalayıp direkt `README.md` dosyana yapıştırabileceğin derli toplu versiyon:
 
-Nilüfer Belediyesi için gerçek zamanlı mekan doluluk takip sistemi.
+```markdown
+# 🚀 NAYS - Nilüfer Akıllı Yoğunluk Sistemi
 
-## Hızlı Başlangıç (Windows)
+**Nilüfer Belediyesi için geliştirilmiş gerçek zamanlı mekan doluluk takip ve yapay zeka destekli öneri sistemi.**
 
-1. **Node.js yükleyin**: https://nodejs.org adresinden indirin ve kurun
-2. **`start.bat`** dosyasına çift tıklayın
-3. Tarayıcınızda açın:
-   - Ana sayfa: http://localhost:3000/main/
-   - NAYS: http://localhost:3000/nays/
+## ⚡ Hızlı Başlangıç (Windows Web)
 
-## Proje Yapısı
+1. **Node.js Yükleyin**: [nodejs.org](https://nodejs.org)
+2. **`start.bat`** dosyasına çift tıklayın.
+3. Tarayıcıda açın:
+   - **Ana Sayfa:** http://localhost:3000/main/
+   - **Uygulama:** http://localhost:3000/nays/
 
-```
+## 📂 Proje Yapısı
+
+```text
 nilbel/
 ├── main/                   # Ana sayfa
-│   ├── index.html
-│   └── nilbel-assets/
-│
-├── nays/                   # NAYS web uygulaması
-│   ├── index.html          # Ana arayüz
-│   ├── nays.js             # Temel işlevler
-│   ├── nays.css            # Stiller
-│   ├── ai_config.js        # AI asistan ayarları
-│   ├── osrm_service.js     # Rota servisleri
-│   └── data.json           # Mekan verileri
-│
-├── nays-ml/                # ML kişi sayma modülü
-│   ├── main.py             # Kamera ile sayım
-│   ├── test.py             # Video ile sayım
-│   └── requirements.txt
-│
-└── start.bat               # Windows başlatıcı
+├── nays/                   # Web uygulaması (HTML/JS/CSS)
+│   ├── ai_config.js        # Gemini AI ayarları
+│   └── osrm_service.js     # Rota servisi
+├── nays-ml/                # Görüntü işleme (Python/YOLO)
+│   ├── main.py             # Webcam sayım
+│   └── test.py             # Video sayım
+└── start.bat               # Başlatıcı
+
 ```
 
-## Özellikler
+## 🐍 NAYS-ML Kurulumu (Görüntü İşleme)
 
-- **Anlık Doluluk**: Gerçek zamanlı ziyaretçi sayıları
-- **AI Asistan**: Sohbet tabanlı mekan önerileri
-- **Rota Hesaplama**: OSRM destekli ulaşım süreleri
-- **ML Sayım**: YOLOv8 tabanlı kişi algılama
+> **Bilgi (Venv):** Proje bağımlılıklarını sistemden izole tutan sanal çalışma ortamıdır.
 
-## Stack
-
-- **Front End**: HTML, CSS, JavaScript, Leaflet.js
-- **Back End**: Statik JSON, OSRM API
-- **ML**: Python 3.11.9, YOLOv8, OpenCV
-
-İstediğin talimatlar aşağıdadır:
-
-**Venv (Virtual Environment) Nedir?**
-Projelerin gerektirdiği kütüphaneleri ve bağımlılıkları sistem genelinden ayrı (izole) tutmanı sağlayan sanal bir çalışma ortamıdır.
-
-### Linux için Kurulum ve Aktivasyon Adımları
-
-**1. Proje Klasörüne Git**
-Öncelikle terminalde proje dizinine geçiş yap:
+### 🐧 Linux / macOS
 
 ```bash
 cd nays-ml
-
-```
-
-**2. Sanal Ortamı (venv) Oluştur**
-Klasör içerisinde `venv` adında sanal bir ortam yarat:
-
-```bash
 python3 -m venv venv
-
-```
-
-**3. Sanal Ortamı Aktifleştir**
-Oluşturduğun ortamı aktif hale getir:
-
-```bash
 source venv/bin/activate
+# Çalıştırma:
+python main.py  # Webcam
+python test.py  # Video
 
 ```
 
-### Çalıştırma Adımları
-
-**Webcam ile görüntü tanıma için:**
-
-```bash
-python main.py
-
-```
-
-**Test videosu için:**
-
-```bash
-python test.py
-
-```
-
-### Windows için Kurulum ve Aktivasyon
-
-**1. Proje Klasörüne Git**
-Terminali aç ve proje dizinine git:
+### 🪟 Windows
 
 ```powershell
 cd nays-ml
-
-```
-
-**2. Sanal Ortamı (venv) Oluştur**
-
-```powershell
 python -m venv venv
-
-```
-
-**3. Sanal Ortamı Aktifleştir**
-Windows'ta `Scripts` klasörü altındaki komutu çalıştır:
-
-```powershell
 venv\Scripts\activate
+# Çalıştırma:
+python main.py  # Webcam
+python test.py  # Video
 
 ```
 
-*(Satır başında `(venv)` ibaresini görmelisin.)*
+## ✨ Özellikler ve Teknoloji
 
----
+### 🏢 Mekan & Rota
 
-### Çalıştırma Adımları
+* **Anlık Takip:** Kütüphane, Kafe, Müze ve Lokantalar için canlı doluluk.
+* **Konum:** `Leaflet.js` harita ve `OSRM API` ile gerçek seyahat süresi.
+* **Analiz:** Geçmiş verilere dayalı saatlik yoğunluk grafikleri.
 
-**Webcam ile görüntü tanıma için:**
+### 🤖 Yapay Zeka (AI)
 
-```powershell
-python main.py
+* **Asistan:** `Gemini 2.0 Flash API` destekli sohbet botu.
+* **Dinamik Öneri:** Doluluk ve mesafeye göre akıllı mekan önerileri.
+
+### 🔧 Teknik Stack
+
+* **Front-End:** Saf JavaScript (Vanilla), HTML, CSS.
+* **Back-End:** Statik JSON veri yapısı (Sunucusuz).
+* **ML:** Python 3.11, YOLOv8, OpenCV.
 
 ```
-
-**Test videosu için:**
-
-```powershell
-python test.py
 
 ```
