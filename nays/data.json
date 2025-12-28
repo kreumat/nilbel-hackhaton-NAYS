@@ -1,0 +1,1962 @@
+[
+  {
+    "venue_id": "001",
+    "venue_name": "Görükle Koza Kütüphane",
+    "venue_type": "Library",
+    "max_capacity": 150,
+    "location": {
+      "lat": 40.2245855,
+      "lng": 28.8513667
+    },
+    "hours": {
+      "weekday": {
+        "open": "09:00",
+        "close": "18:00"
+      },
+      "weekend": {
+        "open": "09:00",
+        "close": "18:00"
+      }
+    },
+    "occupancy_logs": [
+      {
+        "date": "20.12.2025",
+        "time": "10:00",
+        "visitor_count": 18,
+        "occupancy_rate": 12
+      },
+      {
+        "date": "20.12.2025",
+        "time": "11:00",
+        "visitor_count": 32,
+        "occupancy_rate": 21
+      },
+      {
+        "date": "20.12.2025",
+        "time": "12:00",
+        "visitor_count": 51,
+        "occupancy_rate": 34
+      },
+      {
+        "date": "20.12.2025",
+        "time": "13:00",
+        "visitor_count": 68,
+        "occupancy_rate": 45
+      },
+      {
+        "date": "20.12.2025",
+        "time": "14:00",
+        "visitor_count": 82,
+        "occupancy_rate": 55
+      },
+      {
+        "date": "20.12.2025",
+        "time": "15:00",
+        "visitor_count": 95,
+        "occupancy_rate": 63
+      },
+      {
+        "date": "20.12.2025",
+        "time": "16:00",
+        "visitor_count": 108,
+        "occupancy_rate": 72
+      },
+      {
+        "date": "20.12.2025",
+        "time": "17:00",
+        "visitor_count": 118,
+        "occupancy_rate": 79
+      },
+      {
+        "date": "20.12.2025",
+        "time": "18:00",
+        "visitor_count": 125,
+        "occupancy_rate": 83
+      },
+      {
+        "date": "20.12.2025",
+        "time": "19:00",
+        "visitor_count": 132,
+        "occupancy_rate": 88
+      },
+      {
+        "date": "20.12.2025",
+        "time": "20:00",
+        "visitor_count": 138,
+        "occupancy_rate": 92
+      },
+      {
+        "date": "20.12.2025",
+        "time": "21:00",
+        "visitor_count": 141,
+        "occupancy_rate": 94
+      },
+      {
+        "date": "20.12.2025",
+        "time": "22:00",
+        "visitor_count": 128,
+        "occupancy_rate": 85
+      },
+      {
+        "date": "20.12.2025",
+        "time": "23:00",
+        "visitor_count": 89,
+        "occupancy_rate": 59
+      },
+      {
+        "date": "21.12.2025",
+        "time": "10:00",
+        "visitor_count": 21,
+        "occupancy_rate": 14
+      },
+      {
+        "date": "21.12.2025",
+        "time": "11:00",
+        "visitor_count": 38,
+        "occupancy_rate": 25
+      },
+      {
+        "date": "21.12.2025",
+        "time": "12:00",
+        "visitor_count": 56,
+        "occupancy_rate": 37
+      },
+      {
+        "date": "21.12.2025",
+        "time": "13:00",
+        "visitor_count": 72,
+        "occupancy_rate": 48
+      },
+      {
+        "date": "21.12.2025",
+        "time": "14:00",
+        "visitor_count": 88,
+        "occupancy_rate": 59
+      },
+      {
+        "date": "21.12.2025",
+        "time": "15:00",
+        "visitor_count": 102,
+        "occupancy_rate": 68
+      },
+      {
+        "date": "21.12.2025",
+        "time": "16:00",
+        "visitor_count": 112,
+        "occupancy_rate": 75
+      },
+      {
+        "date": "21.12.2025",
+        "time": "17:00",
+        "visitor_count": 121,
+        "occupancy_rate": 81
+      },
+      {
+        "date": "21.12.2025",
+        "time": "18:00",
+        "visitor_count": 128,
+        "occupancy_rate": 85
+      },
+      {
+        "date": "21.12.2025",
+        "time": "19:00",
+        "visitor_count": 135,
+        "occupancy_rate": 90
+      },
+      {
+        "date": "21.12.2025",
+        "time": "20:00",
+        "visitor_count": 140,
+        "occupancy_rate": 93
+      },
+      {
+        "date": "21.12.2025",
+        "time": "21:00",
+        "visitor_count": 137,
+        "occupancy_rate": 91
+      },
+      {
+        "date": "21.12.2025",
+        "time": "22:00",
+        "visitor_count": 115,
+        "occupancy_rate": 77
+      },
+      {
+        "date": "21.12.2025",
+        "time": "23:00",
+        "visitor_count": 78,
+        "occupancy_rate": 52
+      },
+      {
+        "date": "22.12.2025",
+        "time": "09:00",
+        "visitor_count": 12,
+        "occupancy_rate": 8
+      },
+      {
+        "date": "22.12.2025",
+        "time": "10:00",
+        "visitor_count": 28,
+        "occupancy_rate": 19
+      },
+      {
+        "date": "22.12.2025",
+        "time": "11:00",
+        "visitor_count": 42,
+        "occupancy_rate": 28
+      },
+      {
+        "date": "22.12.2025",
+        "time": "12:00",
+        "visitor_count": 51,
+        "occupancy_rate": 34
+      },
+      {
+        "date": "22.12.2025",
+        "time": "13:00",
+        "visitor_count": 48,
+        "occupancy_rate": 32
+      },
+      {
+        "date": "22.12.2025",
+        "time": "14:00",
+        "visitor_count": 55,
+        "occupancy_rate": 37
+      },
+      {
+        "date": "22.12.2025",
+        "time": "15:00",
+        "visitor_count": 62,
+        "occupancy_rate": 41
+      },
+      {
+        "date": "22.12.2025",
+        "time": "16:00",
+        "visitor_count": 78,
+        "occupancy_rate": 52
+      },
+      {
+        "date": "22.12.2025",
+        "time": "17:00",
+        "visitor_count": 95,
+        "occupancy_rate": 63
+      },
+      {
+        "date": "22.12.2025",
+        "time": "18:00",
+        "visitor_count": 118,
+        "occupancy_rate": 79
+      },
+      {
+        "date": "22.12.2025",
+        "time": "19:00",
+        "visitor_count": 132,
+        "occupancy_rate": 88
+      },
+      {
+        "date": "22.12.2025",
+        "time": "20:00",
+        "visitor_count": 142,
+        "occupancy_rate": 95
+      },
+      {
+        "date": "22.12.2025",
+        "time": "21:00",
+        "visitor_count": 145,
+        "occupancy_rate": 97
+      },
+      {
+        "date": "22.12.2025",
+        "time": "22:00",
+        "visitor_count": 138,
+        "occupancy_rate": 92
+      },
+      {
+        "date": "22.12.2025",
+        "time": "23:00",
+        "visitor_count": 98,
+        "occupancy_rate": 65
+      },
+      {
+        "date": "23.12.2025",
+        "time": "09:00",
+        "visitor_count": 15,
+        "occupancy_rate": 10
+      },
+      {
+        "date": "23.12.2025",
+        "time": "10:00",
+        "visitor_count": 31,
+        "occupancy_rate": 21
+      },
+      {
+        "date": "23.12.2025",
+        "time": "11:00",
+        "visitor_count": 45,
+        "occupancy_rate": 30
+      },
+      {
+        "date": "23.12.2025",
+        "time": "12:00",
+        "visitor_count": 54,
+        "occupancy_rate": 36
+      },
+      {
+        "date": "23.12.2025",
+        "time": "13:00",
+        "visitor_count": 52,
+        "occupancy_rate": 35
+      },
+      {
+        "date": "23.12.2025",
+        "time": "14:00",
+        "visitor_count": 58,
+        "occupancy_rate": 39
+      },
+      {
+        "date": "23.12.2025",
+        "time": "15:00",
+        "visitor_count": 65,
+        "occupancy_rate": 43
+      },
+      {
+        "date": "23.12.2025",
+        "time": "16:00",
+        "visitor_count": 82,
+        "occupancy_rate": 55
+      },
+      {
+        "date": "23.12.2025",
+        "time": "17:00",
+        "visitor_count": 98,
+        "occupancy_rate": 65
+      },
+      {
+        "date": "23.12.2025",
+        "time": "18:00",
+        "visitor_count": 122,
+        "occupancy_rate": 81
+      },
+      {
+        "date": "23.12.2025",
+        "time": "19:00",
+        "visitor_count": 138,
+        "occupancy_rate": 92
+      },
+      {
+        "date": "23.12.2025",
+        "time": "20:00",
+        "visitor_count": 148,
+        "occupancy_rate": 99
+      },
+      {
+        "date": "23.12.2025",
+        "time": "21:00",
+        "visitor_count": 146,
+        "occupancy_rate": 97
+      },
+      {
+        "date": "23.12.2025",
+        "time": "22:00",
+        "visitor_count": 132,
+        "occupancy_rate": 88
+      },
+      {
+        "date": "23.12.2025",
+        "time": "23:00",
+        "visitor_count": 92,
+        "occupancy_rate": 61
+      },
+      {
+        "date": "24.12.2025",
+        "time": "09:00",
+        "visitor_count": 18,
+        "occupancy_rate": 12
+      },
+      {
+        "date": "24.12.2025",
+        "time": "10:00",
+        "visitor_count": 35,
+        "occupancy_rate": 23
+      },
+      {
+        "date": "24.12.2025",
+        "time": "11:00",
+        "visitor_count": 48,
+        "occupancy_rate": 32
+      },
+      {
+        "date": "24.12.2025",
+        "time": "12:00",
+        "visitor_count": 58,
+        "occupancy_rate": 39
+      },
+      {
+        "date": "24.12.2025",
+        "time": "13:00",
+        "visitor_count": 55,
+        "occupancy_rate": 37
+      },
+      {
+        "date": "24.12.2025",
+        "time": "14:00",
+        "visitor_count": 61,
+        "occupancy_rate": 41
+      },
+      {
+        "date": "24.12.2025",
+        "time": "15:00",
+        "visitor_count": 68,
+        "occupancy_rate": 45
+      },
+      {
+        "date": "24.12.2025",
+        "time": "16:00",
+        "visitor_count": 85,
+        "occupancy_rate": 57
+      },
+      {
+        "date": "24.12.2025",
+        "time": "17:00",
+        "visitor_count": 102,
+        "occupancy_rate": 68
+      },
+      {
+        "date": "24.12.2025",
+        "time": "18:00",
+        "visitor_count": 125,
+        "occupancy_rate": 83
+      },
+      {
+        "date": "24.12.2025",
+        "time": "19:00",
+        "visitor_count": 141,
+        "occupancy_rate": 94
+      },
+      {
+        "date": "24.12.2025",
+        "time": "20:00",
+        "visitor_count": 147,
+        "occupancy_rate": 98
+      },
+      {
+        "date": "24.12.2025",
+        "time": "21:00",
+        "visitor_count": 143,
+        "occupancy_rate": 95
+      },
+      {
+        "date": "24.12.2025",
+        "time": "22:00",
+        "visitor_count": 128,
+        "occupancy_rate": 85
+      },
+      {
+        "date": "24.12.2025",
+        "time": "23:00",
+        "visitor_count": 85,
+        "occupancy_rate": 57
+      },
+      {
+        "date": "25.12.2025",
+        "time": "09:00",
+        "visitor_count": 14,
+        "occupancy_rate": 9
+      },
+      {
+        "date": "25.12.2025",
+        "time": "10:00",
+        "visitor_count": 29,
+        "occupancy_rate": 19
+      },
+      {
+        "date": "25.12.2025",
+        "time": "11:00",
+        "visitor_count": 44,
+        "occupancy_rate": 29
+      },
+      {
+        "date": "25.12.2025",
+        "time": "12:00",
+        "visitor_count": 52,
+        "occupancy_rate": 35
+      },
+      {
+        "date": "25.12.2025",
+        "time": "13:00",
+        "visitor_count": 49,
+        "occupancy_rate": 33
+      },
+      {
+        "date": "25.12.2025",
+        "time": "14:00",
+        "visitor_count": 56,
+        "occupancy_rate": 37
+      },
+      {
+        "date": "25.12.2025",
+        "time": "15:00",
+        "visitor_count": 63,
+        "occupancy_rate": 42
+      },
+      {
+        "date": "25.12.2025",
+        "time": "16:00",
+        "visitor_count": 79,
+        "occupancy_rate": 53
+      },
+      {
+        "date": "25.12.2025",
+        "time": "17:00",
+        "visitor_count": 96,
+        "occupancy_rate": 64
+      },
+      {
+        "date": "25.12.2025",
+        "time": "18:00",
+        "visitor_count": 119,
+        "occupancy_rate": 79
+      },
+      {
+        "date": "25.12.2025",
+        "time": "19:00",
+        "visitor_count": 135,
+        "occupancy_rate": 90
+      },
+      {
+        "date": "25.12.2025",
+        "time": "20:00",
+        "visitor_count": 144,
+        "occupancy_rate": 96
+      },
+      {
+        "date": "25.12.2025",
+        "time": "21:00",
+        "visitor_count": 141,
+        "occupancy_rate": 94
+      },
+      {
+        "date": "25.12.2025",
+        "time": "22:00",
+        "visitor_count": 125,
+        "occupancy_rate": 83
+      },
+      {
+        "date": "25.12.2025",
+        "time": "23:00",
+        "visitor_count": 88,
+        "occupancy_rate": 59
+      },
+      {
+        "date": "26.12.2025",
+        "time": "09:00",
+        "visitor_count": 16,
+        "occupancy_rate": 11
+      },
+      {
+        "date": "26.12.2025",
+        "time": "10:00",
+        "visitor_count": 33,
+        "occupancy_rate": 22
+      },
+      {
+        "date": "26.12.2025",
+        "time": "11:00",
+        "visitor_count": 47,
+        "occupancy_rate": 31
+      },
+      {
+        "date": "26.12.2025",
+        "time": "12:00",
+        "visitor_count": 56,
+        "occupancy_rate": 37
+      },
+      {
+        "date": "26.12.2025",
+        "time": "13:00",
+        "visitor_count": 53,
+        "occupancy_rate": 35
+      },
+      {
+        "date": "26.12.2025",
+        "time": "14:00",
+        "visitor_count": 59,
+        "occupancy_rate": 39
+      },
+      {
+        "date": "26.12.2025",
+        "time": "15:00",
+        "visitor_count": 66,
+        "occupancy_rate": 44
+      },
+      {
+        "date": "26.12.2025",
+        "time": "16:00",
+        "visitor_count": 83,
+        "occupancy_rate": 55
+      },
+      {
+        "date": "26.12.2025",
+        "time": "17:00",
+        "visitor_count": 100,
+        "occupancy_rate": 67
+      },
+      {
+        "date": "26.12.2025",
+        "time": "18:00",
+        "visitor_count": 123,
+        "occupancy_rate": 82
+      },
+      {
+        "date": "26.12.2025",
+        "time": "19:00",
+        "visitor_count": 139,
+        "occupancy_rate": 93
+      },
+      {
+        "date": "26.12.2025",
+        "time": "20:00",
+        "visitor_count": 146,
+        "occupancy_rate": 97
+      },
+      {
+        "date": "26.12.2025",
+        "time": "21:00",
+        "visitor_count": 142,
+        "occupancy_rate": 95
+      },
+      {
+        "date": "26.12.2025",
+        "time": "22:00",
+        "visitor_count": 126,
+        "occupancy_rate": 84
+      },
+      {
+        "date": "26.12.2025",
+        "time": "23:00",
+        "visitor_count": 82,
+        "occupancy_rate": 55
+      }
+    ]
+  },
+  {
+    "venue_id": "002",
+    "venue_name": "NİLBEL 29 Ekim Kafe",
+    "venue_type": "Cafe",
+    "max_capacity": 80,
+    "location": {
+      "lat": 40.2254042,
+      "lng": 28.9101724
+    },
+    "hours": {
+      "weekday": {
+        "open": "08:00",
+        "close": "17:00"
+      },
+      "weekend": {
+        "open": "08:00",
+        "close": "17:00"
+      }
+    },
+    "occupancy_logs": [
+      {
+        "date": "20.12.2025",
+        "time": "08:00",
+        "visitor_count": 12,
+        "occupancy_rate": 15
+      },
+      {
+        "date": "20.12.2025",
+        "time": "09:00",
+        "visitor_count": 28,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "20.12.2025",
+        "time": "10:00",
+        "visitor_count": 52,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "20.12.2025",
+        "time": "11:00",
+        "visitor_count": 58,
+        "occupancy_rate": 3
+      },
+      {
+        "date": "20.12.2025",
+        "time": "12:00",
+        "visitor_count": 48,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "20.12.2025",
+        "time": "13:00",
+        "visitor_count": 42,
+        "occupancy_rate": 3
+      },
+      {
+        "date": "20.12.2025",
+        "time": "14:00",
+        "visitor_count": 38,
+        "occupancy_rate": 48
+      },
+      {
+        "date": "20.12.2025",
+        "time": "15:00",
+        "visitor_count": 35,
+        "occupancy_rate": 44
+      },
+      {
+        "date": "20.12.2025",
+        "time": "16:00",
+        "visitor_count": 40,
+        "occupancy_rate": 50
+      },
+      {
+        "date": "20.12.2025",
+        "time": "17:00",
+        "visitor_count": 48,
+        "occupancy_rate": 60
+      },
+      {
+        "date": "20.12.2025",
+        "time": "18:00",
+        "visitor_count": 56,
+        "occupancy_rate": 70
+      },
+      {
+        "date": "20.12.2025",
+        "time": "19:00",
+        "visitor_count": 68,
+        "occupancy_rate": 85
+      },
+      {
+        "date": "20.12.2025",
+        "time": "20:00",
+        "visitor_count": 72,
+        "occupancy_rate": 90
+      },
+      {
+        "date": "20.12.2025",
+        "time": "21:00",
+        "visitor_count": 70,
+        "occupancy_rate": 88
+      },
+      {
+        "date": "20.12.2025",
+        "time": "22:00",
+        "visitor_count": 58,
+        "occupancy_rate": 73
+      },
+      {
+        "date": "20.12.2025",
+        "time": "23:00",
+        "visitor_count": 32,
+        "occupancy_rate": 40
+      },
+      {
+        "date": "21.12.2025",
+        "time": "08:00",
+        "visitor_count": 10,
+        "occupancy_rate": 13
+      },
+      {
+        "date": "21.12.2025",
+        "time": "09:00",
+        "visitor_count": 24,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "21.12.2025",
+        "time": "10:00",
+        "visitor_count": 48,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "21.12.2025",
+        "time": "11:00",
+        "visitor_count": 62,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "21.12.2025",
+        "time": "12:00",
+        "visitor_count": 52,
+        "occupancy_rate": 65
+      },
+      {
+        "date": "21.12.2025",
+        "time": "13:00",
+        "visitor_count": 45,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "21.12.2025",
+        "time": "14:00",
+        "visitor_count": 40,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "21.12.2025",
+        "time": "15:00",
+        "visitor_count": 38,
+        "occupancy_rate": 48
+      },
+      {
+        "date": "21.12.2025",
+        "time": "16:00",
+        "visitor_count": 44,
+        "occupancy_rate": 55
+      },
+      {
+        "date": "21.12.2025",
+        "time": "17:00",
+        "visitor_count": 52,
+        "occupancy_rate": 65
+      },
+      {
+        "date": "21.12.2025",
+        "time": "18:00",
+        "visitor_count": 60,
+        "occupancy_rate": 75
+      },
+      {
+        "date": "21.12.2025",
+        "time": "19:00",
+        "visitor_count": 70,
+        "occupancy_rate": 88
+      },
+      {
+        "date": "21.12.2025",
+        "time": "20:00",
+        "visitor_count": 74,
+        "occupancy_rate": 93
+      },
+      {
+        "date": "21.12.2025",
+        "time": "21:00",
+        "visitor_count": 68,
+        "occupancy_rate": 85
+      },
+      {
+        "date": "21.12.2025",
+        "time": "22:00",
+        "visitor_count": 54,
+        "occupancy_rate": 68
+      },
+      {
+        "date": "21.12.2025",
+        "time": "23:00",
+        "visitor_count": 28,
+        "occupancy_rate": 35
+      },
+      {
+        "date": "22.12.2025",
+        "time": "08:00",
+        "visitor_count": 18,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "22.12.2025",
+        "time": "09:00",
+        "visitor_count": 48,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "22.12.2025",
+        "time": "10:00",
+        "visitor_count": 42,
+        "occupancy_rate": 3
+      },
+      {
+        "date": "22.12.2025",
+        "time": "11:00",
+        "visitor_count": 35,
+        "occupancy_rate": 4
+      },
+      {
+        "date": "22.12.2025",
+        "time": "12:00",
+        "visitor_count": 40,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "22.12.2025",
+        "time": "13:00",
+        "visitor_count": 38,
+        "occupancy_rate": 48
+      },
+      {
+        "date": "22.12.2025",
+        "time": "14:00",
+        "visitor_count": 32,
+        "occupancy_rate": 40
+      },
+      {
+        "date": "22.12.2025",
+        "time": "15:00",
+        "visitor_count": 28,
+        "occupancy_rate": 35
+      },
+      {
+        "date": "22.12.2025",
+        "time": "16:00",
+        "visitor_count": 35,
+        "occupancy_rate": 44
+      },
+      {
+        "date": "22.12.2025",
+        "time": "17:00",
+        "visitor_count": 45,
+        "occupancy_rate": 56
+      },
+      {
+        "date": "22.12.2025",
+        "time": "18:00",
+        "visitor_count": 55,
+        "occupancy_rate": 69
+      },
+      {
+        "date": "22.12.2025",
+        "time": "19:00",
+        "visitor_count": 65,
+        "occupancy_rate": 81
+      },
+      {
+        "date": "22.12.2025",
+        "time": "20:00",
+        "visitor_count": 72,
+        "occupancy_rate": 90
+      },
+      {
+        "date": "22.12.2025",
+        "time": "21:00",
+        "visitor_count": 68,
+        "occupancy_rate": 85
+      },
+      {
+        "date": "22.12.2025",
+        "time": "22:00",
+        "visitor_count": 52,
+        "occupancy_rate": 65
+      },
+      {
+        "date": "22.12.2025",
+        "time": "23:00",
+        "visitor_count": 25,
+        "occupancy_rate": 31
+      },
+      {
+        "date": "23.12.2025",
+        "time": "08:00",
+        "visitor_count": 20,
+        "occupancy_rate": 25
+      },
+      {
+        "date": "23.12.2025",
+        "time": "09:00",
+        "visitor_count": 52,
+        "occupancy_rate": 6
+      },
+      {
+        "date": "23.12.2025",
+        "time": "10:00",
+        "visitor_count": 45,
+        "occupancy_rate": 6
+      },
+      {
+        "date": "23.12.2025",
+        "time": "11:00",
+        "visitor_count": 38,
+        "occupancy_rate": 8
+      },
+      {
+        "date": "23.12.2025",
+        "time": "12:00",
+        "visitor_count": 42,
+        "occupancy_rate": 3
+      },
+      {
+        "date": "23.12.2025",
+        "time": "13:00",
+        "visitor_count": 40,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "23.12.2025",
+        "time": "14:00",
+        "visitor_count": 35,
+        "occupancy_rate": 4
+      },
+      {
+        "date": "23.12.2025",
+        "time": "15:00",
+        "visitor_count": 30,
+        "occupancy_rate": 8
+      },
+      {
+        "date": "23.12.2025",
+        "time": "16:00",
+        "visitor_count": 38,
+        "occupancy_rate": 48
+      },
+      {
+        "date": "23.12.2025",
+        "time": "17:00",
+        "visitor_count": 48,
+        "occupancy_rate": 60
+      },
+      {
+        "date": "23.12.2025",
+        "time": "18:00",
+        "visitor_count": 58,
+        "occupancy_rate": 73
+      },
+      {
+        "date": "23.12.2025",
+        "time": "19:00",
+        "visitor_count": 68,
+        "occupancy_rate": 85
+      },
+      {
+        "date": "23.12.2025",
+        "time": "20:00",
+        "visitor_count": 75,
+        "occupancy_rate": 94
+      },
+      {
+        "date": "23.12.2025",
+        "time": "21:00",
+        "visitor_count": 70,
+        "occupancy_rate": 88
+      },
+      {
+        "date": "23.12.2025",
+        "time": "22:00",
+        "visitor_count": 55,
+        "occupancy_rate": 69
+      },
+      {
+        "date": "23.12.2025",
+        "time": "23:00",
+        "visitor_count": 28,
+        "occupancy_rate": 35
+      },
+      {
+        "date": "24.12.2025",
+        "time": "08:00",
+        "visitor_count": 22,
+        "occupancy_rate": 28
+      },
+      {
+        "date": "24.12.2025",
+        "time": "09:00",
+        "visitor_count": 55,
+        "occupancy_rate": 69
+      },
+      {
+        "date": "24.12.2025",
+        "time": "10:00",
+        "visitor_count": 48,
+        "occupancy_rate": 60
+      },
+      {
+        "date": "24.12.2025",
+        "time": "11:00",
+        "visitor_count": 40,
+        "occupancy_rate": 50
+      },
+      {
+        "date": "24.12.2025",
+        "time": "12:00",
+        "visitor_count": 45,
+        "occupancy_rate": 56
+      },
+      {
+        "date": "24.12.2025",
+        "time": "13:00",
+        "visitor_count": 42,
+        "occupancy_rate": 53
+      },
+      {
+        "date": "24.12.2025",
+        "time": "14:00",
+        "visitor_count": 38,
+        "occupancy_rate": 48
+      },
+      {
+        "date": "24.12.2025",
+        "time": "15:00",
+        "visitor_count": 32,
+        "occupancy_rate": 40
+      },
+      {
+        "date": "24.12.2025",
+        "time": "16:00",
+        "visitor_count": 40,
+        "occupancy_rate": 50
+      },
+      {
+        "date": "24.12.2025",
+        "time": "17:00",
+        "visitor_count": 50,
+        "occupancy_rate": 63
+      },
+      {
+        "date": "24.12.2025",
+        "time": "18:00",
+        "visitor_count": 60,
+        "occupancy_rate": 75
+      },
+      {
+        "date": "24.12.2025",
+        "time": "19:00",
+        "visitor_count": 70,
+        "occupancy_rate": 88
+      },
+      {
+        "date": "24.12.2025",
+        "time": "20:00",
+        "visitor_count": 76,
+        "occupancy_rate": 95
+      },
+      {
+        "date": "24.12.2025",
+        "time": "21:00",
+        "visitor_count": 72,
+        "occupancy_rate": 90
+      },
+      {
+        "date": "24.12.2025",
+        "time": "22:00",
+        "visitor_count": 58,
+        "occupancy_rate": 73
+      },
+      {
+        "date": "24.12.2025",
+        "time": "23:00",
+        "visitor_count": 30,
+        "occupancy_rate": 38
+      },
+      {
+        "date": "25.12.2025",
+        "time": "08:00",
+        "visitor_count": 19,
+        "occupancy_rate": 24
+      },
+      {
+        "date": "25.12.2025",
+        "time": "09:00",
+        "visitor_count": 50,
+        "occupancy_rate": 63
+      },
+      {
+        "date": "25.12.2025",
+        "time": "10:00",
+        "visitor_count": 44,
+        "occupancy_rate": 55
+      },
+      {
+        "date": "25.12.2025",
+        "time": "11:00",
+        "visitor_count": 36,
+        "occupancy_rate": 45
+      },
+      {
+        "date": "25.12.2025",
+        "time": "12:00",
+        "visitor_count": 41,
+        "occupancy_rate": 51
+      },
+      {
+        "date": "25.12.2025",
+        "time": "13:00",
+        "visitor_count": 39,
+        "occupancy_rate": 49
+      },
+      {
+        "date": "25.12.2025",
+        "time": "14:00",
+        "visitor_count": 34,
+        "occupancy_rate": 43
+      },
+      {
+        "date": "25.12.2025",
+        "time": "15:00",
+        "visitor_count": 29,
+        "occupancy_rate": 36
+      },
+      {
+        "date": "25.12.2025",
+        "time": "16:00",
+        "visitor_count": 36,
+        "occupancy_rate": 45
+      },
+      {
+        "date": "25.12.2025",
+        "time": "17:00",
+        "visitor_count": 46,
+        "occupancy_rate": 58
+      },
+      {
+        "date": "25.12.2025",
+        "time": "18:00",
+        "visitor_count": 56,
+        "occupancy_rate": 70
+      },
+      {
+        "date": "25.12.2025",
+        "time": "19:00",
+        "visitor_count": 66,
+        "occupancy_rate": 83
+      },
+      {
+        "date": "25.12.2025",
+        "time": "20:00",
+        "visitor_count": 73,
+        "occupancy_rate": 91
+      },
+      {
+        "date": "25.12.2025",
+        "time": "21:00",
+        "visitor_count": 69,
+        "occupancy_rate": 86
+      },
+      {
+        "date": "25.12.2025",
+        "time": "22:00",
+        "visitor_count": 53,
+        "occupancy_rate": 66
+      },
+      {
+        "date": "25.12.2025",
+        "time": "23:00",
+        "visitor_count": 26,
+        "occupancy_rate": 33
+      },
+      {
+        "date": "26.12.2025",
+        "time": "08:00",
+        "visitor_count": 21,
+        "occupancy_rate": 26
+      },
+      {
+        "date": "26.12.2025",
+        "time": "09:00",
+        "visitor_count": 53,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "26.12.2025",
+        "time": "10:00",
+        "visitor_count": 46,
+        "occupancy_rate": 58
+      },
+      {
+        "date": "26.12.2025",
+        "time": "11:00",
+        "visitor_count": 39,
+        "occupancy_rate": 49
+      },
+      {
+        "date": "26.12.2025",
+        "time": "12:00",
+        "visitor_count": 43,
+        "occupancy_rate": 54
+      },
+      {
+        "date": "26.12.2025",
+        "time": "13:00",
+        "visitor_count": 41,
+        "occupancy_rate": 51
+      },
+      {
+        "date": "26.12.2025",
+        "time": "14:00",
+        "visitor_count": 36,
+        "occupancy_rate": 45
+      },
+      {
+        "date": "26.12.2025",
+        "time": "15:00",
+        "visitor_count": 31,
+        "occupancy_rate": 39
+      },
+      {
+        "date": "26.12.2025",
+        "time": "16:00",
+        "visitor_count": 39,
+        "occupancy_rate": 49
+      },
+      {
+        "date": "26.12.2025",
+        "time": "17:00",
+        "visitor_count": 49,
+        "occupancy_rate": 61
+      },
+      {
+        "date": "26.12.2025",
+        "time": "18:00",
+        "visitor_count": 59,
+        "occupancy_rate": 74
+      },
+      {
+        "date": "26.12.2025",
+        "time": "19:00",
+        "visitor_count": 69,
+        "occupancy_rate": 86
+      },
+      {
+        "date": "26.12.2025",
+        "time": "20:00",
+        "visitor_count": 74,
+        "occupancy_rate": 93
+      },
+      {
+        "date": "26.12.2025",
+        "time": "21:00",
+        "visitor_count": 71,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "26.12.2025",
+        "time": "22:00",
+        "visitor_count": 56,
+        "occupancy_rate": 70
+      },
+      {
+        "date": "26.12.2025",
+        "time": "23:00",
+        "visitor_count": 29,
+        "occupancy_rate": 36
+      },
+      {
+        "date": "28.12.2025",
+        "time": "03:33",
+        "visitor_count": 47,
+        "occupancy_rate": 59
+      },
+      {
+        "date": "28.12.2025",
+        "time": "11:29",
+        "visitor_count": 45,
+        "occupancy_rate": 56
+      },
+      {
+        "date": "28.12.2025",
+        "time": "04:36",
+        "visitor_count": 47,
+        "occupancy_rate": 59
+      },
+      {
+        "date": "28.12.2025",
+        "time": "04:36",
+        "visitor_count": 47,
+        "occupancy_rate": 59
+      },
+      {
+        "date": "28.12.2025",
+        "time": "04:37",
+        "visitor_count": 46,
+        "occupancy_rate": 57
+      },
+      {
+        "date": "28.12.2025",
+        "time": "04:37",
+        "visitor_count": 47,
+        "occupancy_rate": 59
+      },
+      {
+        "date": "28.12.2025",
+        "time": "04:37",
+        "visitor_count": 47,
+        "occupancy_rate": 59
+      },
+      {
+        "date": "28.12.2025",
+        "time": "04:38",
+        "visitor_count": 47,
+        "occupancy_rate": 59
+      },
+      {
+        "date": "28.12.2025",
+        "time": "04:38",
+        "visitor_count": 47,
+        "occupancy_rate": 59
+      },
+      {
+        "date": "28.12.2025",
+        "time": "04:38",
+        "visitor_count": 47,
+        "occupancy_rate": 59
+      },
+      {
+        "date": "28.12.2025",
+        "time": "08:20",
+        "visitor_count": 55,
+        "occupancy_rate": 69
+      },
+      {
+        "date": "28.12.2025",
+        "time": "08:22",
+        "visitor_count": 62,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "28.12.2025",
+        "time": "08:24",
+        "visitor_count": 48,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "28.12.2025",
+        "time": "08:24",
+        "visitor_count": 48,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "28.12.2025",
+        "time": "08:24",
+        "visitor_count": 47,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "28.12.2025",
+        "time": "08:25",
+        "visitor_count": 48,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "28.12.2025",
+        "time": "08:25",
+        "visitor_count": 48,
+        "occupancy_rate": 0
+      },
+      {
+        "date": "28.12.2025",
+        "time": "08:25",
+        "visitor_count": 49,
+        "occupancy_rate": 0
+      }
+    ]
+  },
+  {
+    "venue_id": "003",
+    "venue_name": "Görükle Kent Lokantası",
+    "venue_type": "Restaurant",
+    "max_capacity": 52,
+    "location": {
+      "lat": 40.2247114,
+      "lng": 28.8494512
+    },
+    "hours": {
+      "weekday": {
+        "open": "13:00",
+        "close": "18:00"
+      },
+      "weekend": {
+        "open": "13:00",
+        "close": "18:00"
+      }
+    },
+    "closed_days": [
+      "Sunday"
+    ],
+    "occupancy_logs": [
+      {
+        "date": "20.12.2025",
+        "time": "13:00",
+        "visitor_count": 50,
+        "occupancy_rate": 96
+      },
+      {
+        "date": "20.12.2025",
+        "time": "14:00",
+        "visitor_count": 51,
+        "occupancy_rate": 98
+      },
+      {
+        "date": "20.12.2025",
+        "time": "15:00",
+        "visitor_count": 42,
+        "occupancy_rate": 81
+      },
+      {
+        "date": "20.12.2025",
+        "time": "16:00",
+        "visitor_count": 28,
+        "occupancy_rate": 54
+      },
+      {
+        "date": "20.12.2025",
+        "time": "17:00",
+        "visitor_count": 15,
+        "occupancy_rate": 29
+      },
+      {
+        "date": "22.12.2025",
+        "time": "13:00",
+        "visitor_count": 49,
+        "occupancy_rate": 94
+      },
+      {
+        "date": "22.12.2025",
+        "time": "14:00",
+        "visitor_count": 52,
+        "occupancy_rate": 100
+      },
+      {
+        "date": "22.12.2025",
+        "time": "15:00",
+        "visitor_count": 45,
+        "occupancy_rate": 87
+      },
+      {
+        "date": "22.12.2025",
+        "time": "16:00",
+        "visitor_count": 32,
+        "occupancy_rate": 62
+      },
+      {
+        "date": "22.12.2025",
+        "time": "17:00",
+        "visitor_count": 18,
+        "occupancy_rate": 35
+      },
+      {
+        "date": "23.12.2025",
+        "time": "13:00",
+        "visitor_count": 51,
+        "occupancy_rate": 98
+      },
+      {
+        "date": "23.12.2025",
+        "time": "14:00",
+        "visitor_count": 50,
+        "occupancy_rate": 96
+      },
+      {
+        "date": "23.12.2025",
+        "time": "15:00",
+        "visitor_count": 43,
+        "occupancy_rate": 83
+      },
+      {
+        "date": "23.12.2025",
+        "time": "16:00",
+        "visitor_count": 30,
+        "occupancy_rate": 58
+      },
+      {
+        "date": "23.12.2025",
+        "time": "17:00",
+        "visitor_count": 16,
+        "occupancy_rate": 31
+      },
+      {
+        "date": "24.12.2025",
+        "time": "13:00",
+        "visitor_count": 48,
+        "occupancy_rate": 92
+      },
+      {
+        "date": "24.12.2025",
+        "time": "14:00",
+        "visitor_count": 51,
+        "occupancy_rate": 98
+      },
+      {
+        "date": "24.12.2025",
+        "time": "15:00",
+        "visitor_count": 44,
+        "occupancy_rate": 85
+      },
+      {
+        "date": "24.12.2025",
+        "time": "16:00",
+        "visitor_count": 31,
+        "occupancy_rate": 60
+      },
+      {
+        "date": "24.12.2025",
+        "time": "17:00",
+        "visitor_count": 17,
+        "occupancy_rate": 33
+      },
+      {
+        "date": "25.12.2025",
+        "time": "13:00",
+        "visitor_count": 50,
+        "occupancy_rate": 96
+      },
+      {
+        "date": "25.12.2025",
+        "time": "14:00",
+        "visitor_count": 49,
+        "occupancy_rate": 94
+      },
+      {
+        "date": "25.12.2025",
+        "time": "15:00",
+        "visitor_count": 41,
+        "occupancy_rate": 79
+      },
+      {
+        "date": "25.12.2025",
+        "time": "16:00",
+        "visitor_count": 29,
+        "occupancy_rate": 56
+      },
+      {
+        "date": "25.12.2025",
+        "time": "17:00",
+        "visitor_count": 14,
+        "occupancy_rate": 27
+      },
+      {
+        "date": "26.12.2025",
+        "time": "13:00",
+        "visitor_count": 52,
+        "occupancy_rate": 100
+      },
+      {
+        "date": "26.12.2025",
+        "time": "14:00",
+        "visitor_count": 50,
+        "occupancy_rate": 96
+      },
+      {
+        "date": "26.12.2025",
+        "time": "15:00",
+        "visitor_count": 46,
+        "occupancy_rate": 88
+      },
+      {
+        "date": "26.12.2025",
+        "time": "16:00",
+        "visitor_count": 33,
+        "occupancy_rate": 63
+      },
+      {
+        "date": "26.12.2025",
+        "time": "17:00",
+        "visitor_count": 19,
+        "occupancy_rate": 37
+      }
+    ]
+  },
+  {
+    "venue_id": "004",
+    "venue_name": "Edebiyat Müzesi ve Arşivi",
+    "venue_type": "Museum",
+    "max_capacity": 60,
+    "location": {
+      "lat": 40.1768381,
+      "lng": 28.9696079
+    },
+    "hours": {
+      "weekday": {
+        "open": "09:00",
+        "close": "17:00"
+      },
+      "weekend": {
+        "open": "09:00",
+        "close": "17:00"
+      }
+    },
+    "closed_days": [
+      "Monday"
+    ],
+    "occupancy_logs": [
+      {
+        "date": "20.12.2025",
+        "time": "09:00",
+        "visitor_count": 18,
+        "occupancy_rate": 30
+      },
+      {
+        "date": "20.12.2025",
+        "time": "10:00",
+        "visitor_count": 28,
+        "occupancy_rate": 47
+      },
+      {
+        "date": "20.12.2025",
+        "time": "11:00",
+        "visitor_count": 36,
+        "occupancy_rate": 60
+      },
+      {
+        "date": "20.12.2025",
+        "time": "12:00",
+        "visitor_count": 38,
+        "occupancy_rate": 63
+      },
+      {
+        "date": "20.12.2025",
+        "time": "13:00",
+        "visitor_count": 35,
+        "occupancy_rate": 58
+      },
+      {
+        "date": "20.12.2025",
+        "time": "14:00",
+        "visitor_count": 40,
+        "occupancy_rate": 67
+      },
+      {
+        "date": "20.12.2025",
+        "time": "15:00",
+        "visitor_count": 42,
+        "occupancy_rate": 70
+      },
+      {
+        "date": "20.12.2025",
+        "time": "16:00",
+        "visitor_count": 32,
+        "occupancy_rate": 53
+      },
+      {
+        "date": "21.12.2025",
+        "time": "09:00",
+        "visitor_count": 15,
+        "occupancy_rate": 25
+      },
+      {
+        "date": "21.12.2025",
+        "time": "10:00",
+        "visitor_count": 25,
+        "occupancy_rate": 42
+      },
+      {
+        "date": "21.12.2025",
+        "time": "11:00",
+        "visitor_count": 34,
+        "occupancy_rate": 57
+      },
+      {
+        "date": "21.12.2025",
+        "time": "12:00",
+        "visitor_count": 36,
+        "occupancy_rate": 60
+      },
+      {
+        "date": "21.12.2025",
+        "time": "13:00",
+        "visitor_count": 32,
+        "occupancy_rate": 53
+      },
+      {
+        "date": "21.12.2025",
+        "time": "14:00",
+        "visitor_count": 38,
+        "occupancy_rate": 63
+      },
+      {
+        "date": "21.12.2025",
+        "time": "15:00",
+        "visitor_count": 40,
+        "occupancy_rate": 67
+      },
+      {
+        "date": "21.12.2025",
+        "time": "16:00",
+        "visitor_count": 30,
+        "occupancy_rate": 50
+      },
+      {
+        "date": "23.12.2025",
+        "time": "09:00",
+        "visitor_count": 8,
+        "occupancy_rate": 13
+      },
+      {
+        "date": "23.12.2025",
+        "time": "10:00",
+        "visitor_count": 14,
+        "occupancy_rate": 23
+      },
+      {
+        "date": "23.12.2025",
+        "time": "11:00",
+        "visitor_count": 18,
+        "occupancy_rate": 30
+      },
+      {
+        "date": "23.12.2025",
+        "time": "12:00",
+        "visitor_count": 22,
+        "occupancy_rate": 37
+      },
+      {
+        "date": "23.12.2025",
+        "time": "13:00",
+        "visitor_count": 20,
+        "occupancy_rate": 33
+      },
+      {
+        "date": "23.12.2025",
+        "time": "14:00",
+        "visitor_count": 24,
+        "occupancy_rate": 40
+      },
+      {
+        "date": "23.12.2025",
+        "time": "15:00",
+        "visitor_count": 21,
+        "occupancy_rate": 35
+      },
+      {
+        "date": "23.12.2025",
+        "time": "16:00",
+        "visitor_count": 15,
+        "occupancy_rate": 25
+      },
+      {
+        "date": "24.12.2025",
+        "time": "09:00",
+        "visitor_count": 10,
+        "occupancy_rate": 17
+      },
+      {
+        "date": "24.12.2025",
+        "time": "10:00",
+        "visitor_count": 16,
+        "occupancy_rate": 27
+      },
+      {
+        "date": "24.12.2025",
+        "time": "11:00",
+        "visitor_count": 20,
+        "occupancy_rate": 33
+      },
+      {
+        "date": "24.12.2025",
+        "time": "12:00",
+        "visitor_count": 24,
+        "occupancy_rate": 40
+      },
+      {
+        "date": "24.12.2025",
+        "time": "13:00",
+        "visitor_count": 22,
+        "occupancy_rate": 37
+      },
+      {
+        "date": "24.12.2025",
+        "time": "14:00",
+        "visitor_count": 26,
+        "occupancy_rate": 43
+      },
+      {
+        "date": "24.12.2025",
+        "time": "15:00",
+        "visitor_count": 23,
+        "occupancy_rate": 38
+      },
+      {
+        "date": "24.12.2025",
+        "time": "16:00",
+        "visitor_count": 17,
+        "occupancy_rate": 28
+      },
+      {
+        "date": "25.12.2025",
+        "time": "09:00",
+        "visitor_count": 9,
+        "occupancy_rate": 15
+      },
+      {
+        "date": "25.12.2025",
+        "time": "10:00",
+        "visitor_count": 15,
+        "occupancy_rate": 25
+      },
+      {
+        "date": "25.12.2025",
+        "time": "11:00",
+        "visitor_count": 19,
+        "occupancy_rate": 32
+      },
+      {
+        "date": "25.12.2025",
+        "time": "12:00",
+        "visitor_count": 23,
+        "occupancy_rate": 38
+      },
+      {
+        "date": "25.12.2025",
+        "time": "13:00",
+        "visitor_count": 21,
+        "occupancy_rate": 35
+      },
+      {
+        "date": "25.12.2025",
+        "time": "14:00",
+        "visitor_count": 25,
+        "occupancy_rate": 42
+      },
+      {
+        "date": "25.12.2025",
+        "time": "15:00",
+        "visitor_count": 22,
+        "occupancy_rate": 37
+      },
+      {
+        "date": "25.12.2025",
+        "time": "16:00",
+        "visitor_count": 16,
+        "occupancy_rate": 27
+      },
+      {
+        "date": "26.12.2025",
+        "time": "09:00",
+        "visitor_count": 11,
+        "occupancy_rate": 18
+      },
+      {
+        "date": "26.12.2025",
+        "time": "10:00",
+        "visitor_count": 17,
+        "occupancy_rate": 28
+      },
+      {
+        "date": "26.12.2025",
+        "time": "11:00",
+        "visitor_count": 21,
+        "occupancy_rate": 35
+      },
+      {
+        "date": "26.12.2025",
+        "time": "12:00",
+        "visitor_count": 25,
+        "occupancy_rate": 42
+      },
+      {
+        "date": "26.12.2025",
+        "time": "13:00",
+        "visitor_count": 23,
+        "occupancy_rate": 38
+      },
+      {
+        "date": "26.12.2025",
+        "time": "14:00",
+        "visitor_count": 27,
+        "occupancy_rate": 45
+      },
+      {
+        "date": "26.12.2025",
+        "time": "15:00",
+        "visitor_count": 24,
+        "occupancy_rate": 40
+      },
+      {
+        "date": "26.12.2025",
+        "time": "16:00",
+        "visitor_count": 18,
+        "occupancy_rate": 30
+      }
+    ]
+  }
+]

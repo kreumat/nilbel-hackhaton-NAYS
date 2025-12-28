@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>NAYS - Nilüfer Akıllı Yoğunluk Sistemi</title>
+    <meta name="title" content="NAYS - Nilüfer Akıllı Yoğunluk Sistemi" />
+    <meta name="description"
+        content="Nilüfer Belediyesi sosyal tesislerinin anlık doluluk oranlarını görüntüleyin ve en uygun mekanı bulun." />
+    <meta name="keywords" content="Nilüfer, Belediye, Akıllı Şehir, Mekan, Doluluk, AI, Yapay Zeka" />
+    <link rel="icon" href="../main/nilbel-assets/img/nilufer-ico.ico" sizes="32x32" />
+    <!-- Existing CSS from main site -->
+    <link rel="stylesheet" href="../main/nilbel-assets/css/style.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css" />
+    <!-- Leaflet.js for map picker -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- NAYS-specific CSS -->
+    <link rel="stylesheet" href="nays.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container flex center">
+            <div class="header-left">
+                <a href="/main/" title="Nilüfer Belediyesi" class="header-logo">
+                    <img src="../main/nilbel-assets/img/logo.svg" alt="Nilüfer Belediyesi" class="logo-1" />
+                    <img src="../main/nilbel-assets/img/logo-2.svg" alt="Nilüfer Belediyesi"
+                        class="logo-2" />
+                </a>
+                <div class="mobile-navbar">
+                    <a class="target-burger">
+                        <ul class="buns">
+                            <li class="bun"></li>
+                            <li class="bun"></li>
+                        </ul>
+                    </a>
+                    <nav class="main-nav" role="navigation">
+                        <ul>
+                            <li class="ui accordion mobile-nav-dropdown">
+                                <div class="title">
+                                    <a href="/main/" class="dropdown-link">Anasayfa</a>
+                                </div>
+                            </li>
+                            <li class="ui accordion mobile-nav-dropdown">
+                                <div class="title">
+                                    <a href="javascript:void(0)" class="dropdown-link">Kurumsal</a>
+                                    <i class="angle down icon"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="sub-menu">
+                                        <div class="title">
+                                            <a href="javascript:void(0)" class="dropdown-link">Başkan</a>
+                                            <i class="angle down icon"></i>
+                                        </div>
+                                        <div class="content">
+                                            <a href="https://www.nilufer.bel.tr/icerik/sadi-ozdemir"
+                                                class="dropdown-link">Şadi Özdemir</a><br>
+                                            <a href="https://www.nilufer.bel.tr/icerik/baskan-i-izleyin"
+                                                class="dropdown-link">Başkan'ı İzleyin</a><br>
+                                            <a href="https://www.nilufer.bel.tr/icerik/gecmis-baskanlarimiz"
+                                                class="dropdown-link">Geçmiş Başkanlarımız</a><br>
+                                        </div>
+                                        <div class="title">
+                                            <a href="javascript:void(0)" class="dropdown-link">Yönetim</a>
+                                            <i class="angle down icon"></i>
+                                        </div>
+                                        <div class="content">
+                                            <!-- Sub-menu items omitted for brevity but would mirror nilbel.html -->
+                                            <a href="https://www.nilufer.bel.tr/icerik/yonetim-yaklasimimiz"
+                                                class="dropdown-link">Yönetim Yaklaşımımız</a><br>
+                                            <!-- ... (standard nilbel content) ... -->
+                                        </div>
+                                        <!-- Other Kurumsal submenus -->
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Other mobile dropdowns (Hizmetler, Mekanlar, etc.) -->
+                            <li class="ui accordion mobile-nav-dropdown">
+                                <div class="title">
+                                    <a href="index.html" class="dropdown-link nays-active">NAYS</a>
+                                </div>
+                            </li>
+                            <li class="ui accordion mobile-nav-dropdown">
+                                <div class="title">
+                                    <a href="https://e-islem.nilufer.bel.tr" class="dropdown-link">E-İşlem</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header-right flex column">
+                <div class="header-contact flex center">
+                    <a id="header-search">
+                        <i class="search icon"></i><span>Nasıl yardımcı olabiliriz?</span>
+                    </a>
+                    <a href="javascript:void(0)" class="language">TR</a>
+                    <a href="tel:4441603" class="tel">
+                        <i class="phone alternate icon"></i><span>444 16 03</span>
+                    </a>
+                    <ul class="social">
+                        <li><a href="https://www.facebook.com/NiluferBel" target="_blank" title="Facebook"><i
+                                    class="facebook f icon"></i></a></li>
+                        <li><a href="https://twitter.com/NiluferBel" target="_blank" title="Twitter"><i
+                                    class="twitter icon"></i></a></li>
+                        <li><a href="https://www.instagram.com/niluferbel/" target="_blank" title="Instagram"><i
+                                    class="instagram icon"></i></a></li>
+                        <li><a href="https://www.youtube.com/NiluferBel" target="_blank" title="Youtube"><i
+                                    class="youtube icon"></i></a></li>
+                    </ul>
+                </div>
+                <nav class="header-nav flex center">
+                    <a href="/main/" class="nav-link">Anasayfa </a>
+                    <div class="nav-dropdown"> <a href="https://www.nilufer.bel.tr/#" class="dropdown-link">Kurumsal <i
+                                class="angle down icon"></i> </a>
+                        <div class="dropdown-content nav-groups">
+                            <div class="nav-dropdown"> <a href="javascript:void(0)" class="dropdown-link"> Başkan <i
+                                        class="angle down icon"></i> </a>
+                                <div class="dropdown-content nav-groups">
+                                    <a href="https://www.nilufer.bel.tr/icerik/sadi-ozdemir" class="dropdown-link">Şadi
+                                        Özdemir</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/baskana-mesaj"
+                                        class="dropdown-link">Başkana
+                                        Mesaj</a>
+                                </div>
+                            </div>
+                            <div class="nav-dropdown"> <a href="javascript:void(0)" class="dropdown-link"> Yönetim <i
+                                        class="angle down icon"></i> </a>
+                                <div class="dropdown-content nav-groups">
+                                    <a href="https://www.nilufer.bel.tr/baskan_yardimcilari"
+                                        class="dropdown-link">Başkan
+                                        Yardımcıları</a>
+                                    <a href="https://www.nilufer.bel.tr/mudurlukler"
+                                        class="dropdown-link">Müdürlükler</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/organizasyon-semasi"
+                                        class="dropdown-link">Organizasyon Şeması</a>
+                                </div>
+                            </div>
+                            <div class="nav-dropdown"> <a href="javascript:void(0)" class="dropdown-link"> Meclis <i
+                                        class="angle down icon"></i> </a>
+                                <div class="dropdown-content nav-groups">
+                                    <a href="https://www.nilufer.bel.tr/meclis_uyeleri" class="dropdown-link">Meclis
+                                        Üyeleri</a>
+                                    <a href="https://www.nilufer.bel.tr/meclis_kararlari" class="dropdown-link">Meclis
+                                        Gündem ve Kararları</a>
+                                    <a href="https://www.nilufer.bel.tr/encumen_kararlari" class="dropdown-link">Encümen
+                                        Kararları</a>
+                                </div>
+                            </div>
+                            <div class="nav-dropdown"> <a href="javascript:void(0)" class="dropdown-link"> Kurumsal
+                                    Kimlik
+                                    <i class="angle down icon"></i> </a>
+                                <div class="dropdown-content nav-groups">
+                                    <a href="https://www.nilufer.bel.tr/icerik/yonetim-politikamiz"
+                                        class="dropdown-link">Yönetim Politikamız</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/vizyon-misyon-ve-degerlerimiz"
+                                        class="dropdown-link">Vizyon & Misyon & Değerler</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/insan-kaynaklari-politikamiz"
+                                        class="dropdown-link">İnsan Kaynakları Politikamız</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/logolar"
+                                        class="dropdown-link">Logolar</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/etik-komisyonu"
+                                        class="dropdown-link">Etik
+                                        Komisyonu</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/kvkk" class="dropdown-link">KVKK</a>
+                                </div>
+                            </div>
+                            <div class="nav-dropdown"> <a href="javascript:void(0)" class="dropdown-link"> Stratejik
+                                    Yönetim <i class="angle down icon"></i> </a>
+                                <div class="dropdown-content nav-groups">
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/dokuman/stratejik-planlar"
+                                        class="dropdown-link">Stratejik Planlar</a>
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/dokuman/butce-ve-performans"
+                                        class="dropdown-link">Bütçe ve Performans</a>
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/dokuman/faaliyet-raporlari"
+                                        class="dropdown-link">Faaliyet Raporları</a>
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/dokuman/hizmet-standartlari"
+                                        class="dropdown-link">Hizmet Standartları</a>
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/dokuman/yonetmelikler"
+                                        class="dropdown-link">Yönetmelikler</a>
+                                </div>
+                            </div>
+                            <div class="nav-dropdown"> <a href="javascript:void(0)" class="dropdown-link"> Nilüfer'i
+                                    Keşfet <i class="angle down icon"></i> </a>
+                                <div class="dropdown-content nav-groups">
+                                    <a href="https://www.nilufer.bel.tr/icerik/tarihce"
+                                        class="dropdown-link">Tarihçe</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/kardes-kentler"
+                                        class="dropdown-link">Kardeş
+                                        Kentler</a>
+                                    <a href="https://www.nilufer.bel.tr/nobetci_eczaneler" class="dropdown-link">Nöbetçi
+                                        Eczaneler</a>
+                                </div>
+                            </div>
+                            <div class="nav-dropdown"> <a href="javascript:void(0)" class="dropdown-link"> İletişim <i
+                                        class="angle down icon"></i> </a>
+                                <div class="dropdown-content nav-groups">
+                                    <a href="https://www.nilufer.bel.tr/icerik/iletisim-bilgileri"
+                                        class="dropdown-link">İletişim Bilgileri</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/rehber" class="dropdown-link">Rehber</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/kurumsal-banka-hesaplari"
+                                        class="dropdown-link">Kurumsal Banka Hesapları</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown"> <a href="https://www.nilufer.bel.tr/#" class="dropdown-link">Hizmetler <i
+                                class="angle down icon"></i> </a>
+                        <div class="dropdown-content nav-groups">
+                            <div class="nav-dropdown"> <a href="javascript:void(0)" class="dropdown-link"> Sosyal
+                                    Hizmetler <i class="angle down icon"></i> </a>
+                                <div class="dropdown-content nav-groups">
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/hizmet/sosyal-dayanisma-etkinlikleri"
+                                        class="dropdown-link">Sosyal Dayanışma Etkinlikleri</a>
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/proje/sosyal-dayanisma-projeleri"
+                                        class="dropdown-link">Sosyal Dayanışma Projeleri</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/nikah-memurlugu"
+                                        class="dropdown-link">Nikah
+                                        Memurluğu</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/asker-ailesi-yardimi"
+                                        class="dropdown-link">Asker Ailesi Yardımı</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/ikinci-el-esya-toplama"
+                                        class="dropdown-link">İkinci El Eşya Toplama</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/cenaze-hizmetleri"
+                                        class="dropdown-link">Cenaze Hizmetleri</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/sokak-hayvanlari-rehabilitasyon-hizmeti"
+                                        class="dropdown-link">Sokak Hayvanları Rehabilitasyon Hizmeti</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/sosyal-yardim-basvurusu"
+                                        class="dropdown-link">Sosyal Yardım Başvurusu</a>
+                                </div>
+                            </div>
+                            <div class="nav-dropdown"> <a href="javascript:void(0)" class="dropdown-link">
+                                    Kültür & Sanat <i class="angle down icon"></i> </a>
+                                <div class="dropdown-content nav-groups">
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/hizmet/kultur-sanat-etkinlikleri"
+                                        class="dropdown-link">Kültür&Sanat Etkinlikleri</a>
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/proje/kultur-sanat-projeleri"
+                                        class="dropdown-link">Kültür&Sanat Projeleri</a>
+                                </div>
+                            </div>
+                            <div class="nav-dropdown"> <a href="javascript:void(0)" class="dropdown-link">
+                                    İmar & Planlama <i class="angle down icon"></i> </a>
+                                <div class="dropdown-content nav-groups">
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/proje/kentsel-tasarim-projeleri"
+                                        class="dropdown-link">Kentsel Tasarım Projeleri</a>
+                                    <a href="https://www.nilufer.bel.tr/imardurumu" class="dropdown-link">E-İmar</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/askidaki-planlar"
+                                        class="dropdown-link">Askıdaki Planlar</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/numarataj-hizmeti"
+                                        class="dropdown-link">Numarataj Hizmeti</a>
+                                </div>
+                            </div>
+                            <div class="nav-dropdown"> <a href="javascript:void(0)" class="dropdown-link"> Park & Bahçe
+                                    <i class="angle down icon"></i> </a>
+                                <div class="dropdown-content nav-groups">
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/proje/park-ve-bahce-projeleri"
+                                        class="dropdown-link">Park ve Bahçe Projeleri</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/nilufer-bostan-satis-noktalari"
+                                        class="dropdown-link">Nilüfer Bostan Satış Noktaları</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/hobi-bahceleri"
+                                        class="dropdown-link">Hobi
+                                        Bahçeleri</a>
+                                </div>
+                            </div>
+                            <div class="nav-dropdown"> <a href="javascript:void(0)" class="dropdown-link"> Tarım &
+                                    Üretim
+                                    <i class="angle down icon"></i> </a>
+                                <div class="dropdown-content nav-groups">
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/hizmet/tarim-uretim-etkinlikleri"
+                                        class="dropdown-link">Tarım&Üretim Etkinlikleri</a>
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/proje/tarim-uretim-projeleri"
+                                        class="dropdown-link">Tarım&Üretim Projeleri</a>
+                                </div>
+                            </div>
+                            <div class="nav-dropdown"> <a href="javascript:void(0)" class="dropdown-link">
+                                    Eğitim & Bilim & Teknoloji <i class="angle down icon"></i> </a>
+                                <div class="dropdown-content nav-groups">
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/hizmet/egitim-bilim-teknoloji-etkinlikleri"
+                                        class="dropdown-link">Eğitim&Bilim&Teknoloji Etkinlikleri</a>
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/proje/egitim-bilim-teknoloji-projeleri"
+                                        class="dropdown-link">Eğitim&Bilim&Teknoloji Projeleri</a>
+                                </div>
+                            </div>
+                            <div class="nav-dropdown"> <a href="javascript:void(0)" class="dropdown-link">
+                                    Çevre & Doğal Yaşam <i class="angle down icon"></i> </a>
+                                <div class="dropdown-content nav-groups">
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/hizmet/cevre-dogal-yasam-etkinlikleri"
+                                        class="dropdown-link">Çevre&Doğal Yaşam Etkinlikleri</a>
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/proje/cevre-dogal-yasam-projeleri"
+                                        class="dropdown-link">Çevre&Doğal Yaşam Projeleri</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/temizlik-ve-geri-donusum-hizmetleri"
+                                        class="dropdown-link"> Temizlik ve Geri Dönüşüm Hizmetleri</a>
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/hizmet/veteriner-hizmetleri"
+                                        class="dropdown-link">Veteriner Hizmetleri</a>
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/hizmet/hava-ve-su-kalitesi-izleme"
+                                        class="dropdown-link">Hava ve Su Kalitesi İzleme</a>
+                                </div>
+                            </div>
+                            <div class="nav-dropdown"> <a href="javascript:void(0)" class="dropdown-link">
+                                    Spor <i class="angle down icon"></i> </a>
+                                <div class="dropdown-content nav-groups">
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/hizmet/spor-etkinlikleri"
+                                        class="dropdown-link">Spor Etkinlikleri</a>
+                                    <a href="https://www.nilufer.bel.tr/kategoriler/proje/spor-projeleri"
+                                        class="dropdown-link">Spor Projeleri</a>
+                                </div>
+                            </div>
+                            <div class="nav-dropdown"> <a href="javascript:void(0)" class="dropdown-link">
+                                    Sağlıklı Kent <i class="angle down icon"></i> </a>
+                                <div class="dropdown-content nav-groups">
+                                    <a href="https://www.nilufer.bel.tr/icerik/saglikli-kentler-proje-ofisi"
+                                        class="dropdown-link">Sağlıklı Kentler Proje Ofisi</a>
+                                    <a href="https://www.nilufer.bel.tr/icerik/nilufer-tek-saglik-sempozyumu"
+                                        class="dropdown-link">Nilüfer Tek Sağlık Sempozyumu</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown"> <a href="https://www.nilufer.bel.tr/#" class="dropdown-link">Mekânlar <i
+                                class="angle down icon"></i> </a>
+                        <div class="dropdown-content nav-groups">
+                            <a href="https://www.nilufer.bel.tr/kategoriler/tesisler/bakimevi-ve-huzurevleri"
+                                class="dropdown-link">
+                                Bakımevi ve Huzurevleri </a>
+                            <a href="https://www.nilufer.bel.tr/kategoriler/tesisler/kulturevleri"
+                                class="dropdown-link">
+                                Kültürevleri </a>
+                            <a href="https://www.nilufer.bel.tr/kategoriler/tesisler/kutuphaneler-ve-yazievleri"
+                                class="dropdown-link">
+                                Kütüphaneler ve Yazıevleri </a>
+                            <a href="https://www.nilufer.bel.tr/kategoriler/tesisler/muzeler" class="dropdown-link">
+                                Müzeler </a>
+                            <a href="https://www.nilufer.bel.tr/kategoriler/tesisler/spor-tesisleri"
+                                class="dropdown-link">
+                                Spor Tesisleri </a>
+                            <a href="https://www.nilufer.bel.tr/kategoriler/tesisler/sosyal-yasam-merkezleri-alanlari"
+                                class="dropdown-link">
+                                Sosyal Yaşam Merkezleri / Alanları </a>
+                            <a href="https://www.nilufer.bel.tr/kategoriler/tesisler/sivil-toplum-alanlari"
+                                class="dropdown-link">
+                                Sivil Toplum Alanları </a>
+                            <a href="https://www.nilufer.bel.tr/kategoriler/tesisler/egitim-bilim-teknoloji-mekanlari"
+                                class="dropdown-link">
+                                Eğitim&Bilim&Teknoloji Mekanları </a>
+                            <a href="https://www.nilufer.bel.tr/kategoriler/tesisler/tarim-uretim-mekanlari"
+                                class="dropdown-link">
+                                Tarım&Üretim Mekânları </a>
+                            <a href="https://www.nilufer.bel.tr/kategoriler/tesisler/kadin-cocuk-akademileri"
+                                class="dropdown-link">
+                                Kadın - Çocuk Akademileri </a>
+                            <a href="https://www.nilufer.bel.tr/kategoriler/tesisler/kadin-dernekleri"
+                                class="dropdown-link">
+                                Kadın Dernekleri </a>
+                            <a href="https://www.nilufer.bel.tr/kategoriler/tesisler/cevre-dogal-yasam-mekanlari"
+                                class="dropdown-link">
+                                Çevre&Doğal Yaşam Mekânları </a>
+                            <a href="https://www.nilufer.bel.tr/kategoriler/tesisler/tematik-parklar-ve-ormanlar"
+                                class="dropdown-link">
+                                Tematik Parklar ve Ormanlar </a>
+                            <a href="https://www.nilufer.bel.tr/kategoriler/tesisler/idari-binalar"
+                                class="dropdown-link">
+                                İdari Binalar </a>
+                            <a href="https://www.nilufer.bel.tr/kategoriler/tesisler/pazar-yerleri"
+                                class="dropdown-link">
+                                Pazar Yerleri </a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown"> <a href="https://www.nilufer.bel.tr/#" class="dropdown-link">Nilüfer
+                            Güncesi <i class="angle down icon"></i> </a>
+                        <div class="dropdown-content nav-groups">
+                            <a href="https://www.nilufer.bel.tr/haberler" class="dropdown-link">
+                                Haberler </a>
+                            <a href="https://www.nilufer.bel.tr/nilufertv" class="dropdown-link">
+                                Nilüfer TV </a>
+                            <a href="https://www.nilufer.bel.tr/etkinlikler" class="dropdown-link">
+                                Etkinlik Takvimi </a>
+                            <a href="https://www.nilufer.bel.tr/yayinlar" class="dropdown-link">
+                                Yayınlar </a>
+                            <a href="https://www.nilufer.bel.tr/duyurular" class="dropdown-link">
+                                Duyurular </a>
+                            <a href="https://www.nilufer.bel.tr/icerik/nilufer-podcast" class="dropdown-link">
+                                Nilüfer Podcast </a>
+                        </div>
+                    </div>
+
+                    <a href="index.html" class="nav-link">NAYS</a>
+                    <a href="https://e-islem.nilufer.bel.tr" class="nav-link">E-İşlem </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="nays-hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span>Yapay Zeka Destekli</span>
+                    </div>
+                    <h1>NAYS</h1>
+                    <h2>Nilüfer Akıllı Yoğunluk Sistemi</h2>
+                    <p>Nilüfer Belediyesi sosyal tesislerinin anlık doluluk oranlarını görüntüleyin, yapay zeka destekli
+                        tahminlerle en uygun mekanı bulun ve zaman kaybetmeden planınızı yapın.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">24</span>
+                            <span class="stat-label">Tesis</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15K+</span>
+                            <span class="stat-label">Günlük Ziyaretçi</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">%95</span>
+                            <span class="stat-label">Tahmin Doğruluğu</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Chat Widget -->
+                <div class="nays-chat-widget">
+                    <div class="chat-header">
+                        <div class="chat-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="chat-title">
+                            <h4>NAYS Asistan</h4>
+                            <span>Size nasıl yardımcı olabilirim?</span>
+                        </div>
+                    </div>
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message ai">
+                            Merhaba! Ben NAYS Asistan. Size nasıl yardımcı olabilirim?
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="chat-input" placeholder="Bir soru sorun..." autocomplete="off">
+                        <button id="chat-send-btn"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section id="info-section">
+            <div class="container">
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Anlık Veri</h4>
+                            <p>Tesislerin doluluk oranları gerçek zamanlı olarak güncellenir.</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>AI Destekli</h4>
+                            <p>Kullanıcılar yapay zeka asistanından NAYS kullanımı hakkında bilgi alabilir.</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Mesafe Hesaplama</h4>
+                            <p>Konumunuza göre mekânlara ulaşım süresi hesaplanır.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Selection -->
+        <section id="categories">
+            <div class="container">
+                <h3 class="section-title">Mekan Türü Seçin</h3>
+                <div class="category-grid">
+                    <div class="category-card active" data-category="all">
+                        <i class="fas fa-th-large"></i>
+                        <span>Tümü</span>
+                    </div>
+                    <div class="category-card" data-category="kutuphane">
+                        <i class="fas fa-book"></i>
+                        <span>Kütüphane</span>
+                    </div>
+                    <div class="category-card" data-category="kafe">
+                        <i class="fas fa-coffee"></i>
+                        <span>Kafe</span>
+                    </div>
+                    <div class="category-card" data-category="muze">
+                        <i class="fas fa-university"></i>
+                        <span>Müze</span>
+                    </div>
+
+                    <div class="category-card" data-category="lokanta">
+                        <i class="fas fa-utensils"></i>
+                        <span>Lokanta</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Venue Grid -->
+        <section id="venues">
+            <div class="container">
+                <div class="venues-header">
+                    <h3 class="section-title">Mekanlar</h3>
+                    <div class="sort-options">
+                        <span>Sırala:</span>
+                        <select id="sort-select">
+                            <option value="occupancy">Doluluk (Düşük → Yüksek)</option>
+                            <option value="distance">Mesafe (Yakın → Uzak)</option>
+                            <option value="name">İsim (A → Z)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Location Picker Banner -->
+                <div class="location-picker-banner" id="location-picker-banner">
+                    <div class="location-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="location-info">
+                        <h4 id="location-status-text">Konumunuz belirlenmedi</h4>
+                        <p id="location-detail-text">Mesafe hesaplaması için konumunuzu seçin</p>
+                    </div>
+                    <button class="btn-white" id="open-map-picker">
+                        <i class="fas fa-map"></i> Konum Seç
+                    </button>
+                </div>
+
+                <!-- AI Recommendation Banner -->
+                <div class="ai-recommendation" id="ai-recommendation">
+                    <div class="recommendation-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="recommendation-content">
+                        <h4>Akıllı Öneri</h4>
+                        <p id="recommendation-text">Şu an en az yoğun mekan: <strong>Görükle Kütüphanesi</strong> (%25
+                            doluluk). Oraya 8 dakikada ulaşabilirsiniz.</p>
+                    </div>
+                    <button class="btn-outline" id="go-recommendation">Git <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Venue Cards -->
+                <div class="venue-grid" id="venue-grid">
+                    <!-- Venues will be rendered by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Venue Detail Modal -->
+        <div class="venue-modal" id="venue-modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+                <div class="modal-header">
+                    <h2 id="modal-venue-name">Mekan Adı</h2>
+                    <div class="modal-status" id="modal-status">
+                        <span class="status-badge green">Rahat</span>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="modal-address">Adres bilgisi</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <span id="modal-hours">09:00 - 22:00</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-users"></i>
+                            <span id="modal-capacity">Kapasite: 80 kişi</span>
+                        </div>
+                    </div>
+
+                    <!-- Current Occupancy -->
+                    <div class="occupancy-section">
+                        <h4>Anlık Doluluk</h4>
+                        <div class="occupancy-display">
+                            <div class="occupancy-circle" id="modal-occupancy-circle">
+                                <svg viewBox="0 0 36 36">
+                                    <path class="circle-bg"
+                                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="circle-progress" stroke-dasharray="25, 100"
+                                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                </svg>
+                                <span class="percentage" id="modal-percentage">25%</span>
+                            </div>
+                            <div class="occupancy-details">
+                                <p><strong id="modal-current-people">20</strong> kişi içeride</p>
+                                <p class="capacity-text"><span id="modal-max-capacity">80</span> kişi kapasite</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prediction Section -->
+                    <div class="prediction-section" id="prediction-section">
+                        <h4>Varış Tahmini</h4>
+                        <div class="prediction-card">
+                            <div class="prediction-icon">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <div class="prediction-info">
+                                <p>Siz oraya <strong id="modal-travel-time">14 dakika</strong> sonra ulaşacaksınız.</p>
+                                <p class="prediction-result" id="modal-prediction">Tahmini doluluk: <strong>%40</strong>
+                                    - Rahatça yer bulabilirsiniz.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hourly Chart -->
+                    <div class="chart-section">
+                        <h4>Saatlik Yoğunluk Grafiği</h4>
+                        <p class="chart-subtitle">Bugün için ortalama doluluk oranları</p>
+                        <div class="hourly-chart" id="hourly-chart">
+                            <!-- Chart bars will be rendered by JavaScript -->
+                        </div>
+                        <div class="chart-labels" id="chart-labels">
+                            <!-- Labels will be rendered by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn-primary" id="modal-directions">
+                        <i class="fas fa-directions"></i> Yol Tarifi Al
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works">
+            <div class="container">
+                <h3 class="section-title center">Nasıl Çalışır?</h3>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h4>Görüntü İşleme</h4>
+                        <p>Tesislerin giriş-çıkış kapılarındaki AI kameralar, giren ve çıkan kişileri sayar.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h4>Anlık Hesaplama</h4>
+                        <p>Doluluk oranı = (İçerideki Kişi / Kapasite) × 100 formülü ile hesaplanır.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h4>Mesafe Analizi</h4>
+                        <p>Konumunuz alınarak en yakın tesislere ulaşım süreleri hesaplanır.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h4>Akıllı Tahmin</h4>
+                        <p>Geçmiş verilere dayalı AI tahminleriyle varış anındaki doluluk öngörülür.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits">
+            <div class="container">
+                <h3 class="section-title center">Neden NAYS?</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-city"></i>
+                        <h4>Akıllı Şehir Vizyonu</h4>
+                        <p>Veriye dayalı şehir yönetimi ile kaynakların verimli kullanımı.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-smile"></i>
+                        <h4>Vatandaş Memnuniyeti</h4>
+                        <p>"Gidip yer bulamama" stresini ve zaman kaybını ortadan kaldırır.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-leaf"></i>
+                        <h4>Enerji Tasarrufu</h4>
+                        <p>Tesislerin kullanım analizleriyle kaynak planlaması optimize edilir.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-traffic-light"></i>
+                        <h4>Trafik Azaltma</h4>
+                        <p>Vatandaşları müsait mekanlara yönlendirerek bölgesel yoğunluk dengelenir.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container flex center">
+            <a href="/main/" class="footer-logo">
+                <img src="../main/nilbel-assets/img/footer-logo.svg" alt="Nilüfer Belediyesi" />
+            </a>
+            <div class="contact-area flex column center">
+                <div class="contact flex">
+                    <img src="../main/nilbel-assets/img/phone.png" alt="İletişim" />
+                    <div class="phone">
+                        <a href="tel:4441603" class="tel">
+                            <span>Çağrı Merkezi</span>
+                            <span class="tel">444 16 03</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="copyright">
+                    Nilüfer Belediyesi. Copyright ©2024 Tüm Hakları Saklıdır.
+                </div>
+                <div>
+                    <a href="https://www.nilufer.bel.tr/sayfa/kvkk"><b>KVKK Bilgilendirme-Başvuru</b></a>
+                </div>
+            </div>
+            <div class="store-links">
+                <a target="_blank" href="https://apps.apple.com/tr/app/nil%C3%BCfer-her-yerde/id6444892971">
+                    <i class="large apple icon"></i>
+                    <div>
+                        <span>Download on the</span>
+                        <span>App Store</span>
+                    </div>
+                </a>
+                <a target="_blank" href="https://play.google.com/store/apps/developer?id=Bursa+Nil%C3%BCfer+Belediyesi">
+                    <i class="large google play icon"></i>
+                    <div>
+                        <span>Available on the</span>
+                        <span>Google Play</span>
+                    </div>
+                </a>
+                <a target="_blank" href="https://appgallery.huawei.com/app/C107660969">
+                    <svg width="34" height="24" viewBox="0 0 34 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16.9629 0.20752H6.76763C1.95251 0.20752 0.208252 1.97024 0.208252 6.74428V16.9044C0.208252 21.7029 1.97707 23.4412 6.76763 23.4412H16.9629C21.778 23.4412 23.5223 21.6785 23.5223 16.9044V6.74428C23.5468 1.97024 21.778 0.20752 16.9629 0.20752Z"
+                            fill="white" />
+                        <path
+                            d="M4.82692 11.8369H5.44109V14.8727H4.82692V13.6486H3.42661V14.8727H2.81244V11.8369H3.42661V13.0611H4.82692V11.8369ZM8.31541 13.5751C8.31541 14.0648 8.06978 14.3341 7.62757 14.3341C7.18535 14.3341 6.93966 14.0648 6.93966 13.5507V11.8369H6.32551V13.5751C6.32551 14.432 6.79228 14.9217 7.62757 14.9217C8.46283 14.9217 8.95415 14.432 8.95415 13.5507V11.8369H8.34002V13.5751H8.31541ZM15.4644 13.9179L14.7765 11.8369H14.2606L13.5728 13.9179L12.9094 11.8369H12.2461L13.3025 14.8727H13.8184L14.5063 12.8651L15.1941 14.8727H15.7101L16.7665 11.8369H16.1277L15.4644 13.9179ZM17.8965 13.5751H19.0266V13.0121H17.8965V12.4H19.5425V11.8369H17.307V14.8727H19.6163V14.3096H17.9211V13.5751H17.8965ZM20.3286 14.8727H20.9428V11.8369H20.3286V14.8727ZM10.1579 14.2362L9.88775 14.8727H9.24894L10.5756 11.8369H11.1161L12.4427 14.8727H11.8039L11.5337 14.2362H10.1579ZM10.3791 13.6975H11.3126L10.8458 12.6203L10.3791 13.6975Z"
+                            fill="#4EA9BA" />
+                        <path
+                            d="M11.8775 7.96857C9.74022 7.96857 7.99597 6.2303 7.99597 4.10034H8.53645C8.53645 5.93651 10.035 7.42994 11.8775 7.42994C13.7201 7.42994 15.2187 5.93651 15.2187 4.10034H15.7591C15.7591 6.2303 14.0149 7.96857 11.8775 7.96857Z"
+                            fill="#4EA9BA" />
+                    </svg>
+                    <div>
+                        <span>Available on the</span>
+                        <span>AppGallery</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Map Picker Modal -->
+    <div class="map-picker-modal" id="map-picker-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content map-modal-content">
+            <button class="modal-close" id="map-picker-close"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h2><i class="fas fa-map-marker-alt"></i> Konumunuzu Seçin</h2>
+                <p>Haritada konumunuzu işaretleyin veya pini sürükleyerek taşıyın</p>
+            </div>
+            <div class="modal-body">
+                <div id="location-map" class="location-map"></div>
+                <div class="selected-location">
+                    <i class="fas fa-crosshairs"></i>
+                    <span>Seçilen konum: </span>
+                    <strong id="selected-location-text">--</strong>
+                </div>
+            </div>
+            <div class="modal-footer map-modal-footer">
+                <button class="btn-outline" id="map-picker-cancel">İptal</button>
+                <button class="btn-primary" id="map-picker-confirm">
+                    <i class="fas fa-check"></i> Konumu Onayla
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet.js for map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="ai_config.js"></script>
+    <script src="osrm_service.js"></script>
+    <script src="nays.js"></script>
+</body>
+
+</html>
