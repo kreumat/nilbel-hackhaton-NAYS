@@ -1,12 +1,9 @@
 2025 27 Aralık Nilüfer Yapay Zeka Hackathonu Birinci Sıra
 
 Anı olması için public olarak bırakıyorum. Heyt be!
-Yusuf Terzi
-Metin Torun
+Yusuf Terzi / Metin Torun
 
-Siz birde sunumu görecektiniz!
-
---
+Siz bir de sunumu görecektiniz!
 
 # NAYS – Nilüfer Akıllı Yoğunluk Sistemi
 
